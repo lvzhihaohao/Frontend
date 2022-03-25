@@ -1,0 +1,173 @@
+1.从页面到输入网址到渲染完成经历了哪些过程？
+过
+
+
+4.在JSX中使用javascript表达式
+https://blog.csdn.net/weixin_50157463/article/details/112095916
+
+5，数组的一些方法 （排序，去重，等等等） 
+https://blog.csdn.net/wangdanYL/article/details/109046408
+
+6.  flex   的使用   
+https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+react Hooks
+https://www.jianshu.com/p/d600f749bb19
+
+2.数组有哪几种排序方式，最少2种，冒泡排序，插入排序选择排序
+https://blog.csdn.net/weixin_56499671/article/details/115378678
+
+3.XML 的特性
+https://zhidao.baidu.com/question/287489846.html
+
+7.事件冒泡，事件捕获，事件委托，
+https://www.cnblogs.com/leftJS/p/10948138.html
+
+递归，原型链 
+https://blog.csdn.net/weixin_45105458/article/details/99889087
+
+8.AMD 和 CMD 的区别.
+https://blog.csdn.net/jackwen110200/article/details/52105493
+
+9. 深拷贝vs 浅拷贝
+https://blog.csdn.net/qq_35859392/article/details/105898748
+
+10.区分数组和对象的方法
+https://www.jianshu.com/p/44dd39710e86
+11.对Promise的理解.
+https://www.cnblogs.com/lvdabao/p/es6-promise-1.html
+12.介绍一下async 和await
+https://blog.csdn.net/weixin_45731450/article/details/107116501
+
+13.常用的浏览器内核 
+https://blog.csdn.net/qq_36647038/article/details/81269238
+
+
+14.html5的新特性
+ 
+
+16.对于es6的理解 
+https://www.cnblogs.com/heweijain/p/7073553.html
+
+17.es6怎么兼容ie8
+https://blog.csdn.net/weixin_28703489/article/details/117740717?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.no_search_link
+
+18.那些操作会造成内存泄漏
+https://www.cnblogs.com/kaicy/p/14715750.html
+
+19.普通函数和箭头函数的区别.
+https://blog.csdn.net/weixin_52703987/article/details/111239471
+
+20.js基本数据类型 
+https://zhuanlan.zhihu.com/p/127100161
+
+21.类型判断有那些方法
+https://blog.csdn.net/weixin_30411819/article/details/98112019
+
+22.js有哪几种类型的值：（栈和堆 ）
+
+23.js有那些内置对象
+24.如何区分数组和对象
+25.变量的声明周期
+27.如何创建一个ajax
+28.同步和异步的区别
+https://blog.csdn.net/weixin_39769091/article/details/110812856
+29.如何解决跨域问题
+https://www.cnblogs.com/ysocean/p/9380551.html
+
+30.为什么有同源限制
+31.常见的web安全及防护原理
+32.XSS和CSRF的区别
+https://www.cnblogs.com/itsuibi/p/10752868.html
+33.http和https
+34.get和post
+35.前端需要注意那些seo
+36.Dom和Bom
+37.什么是window对象，什么是document对象
+38.js继承有哪几种方式
+39.js创建对象有哪几种方式
+40.页面怎么重构
+41.ie和其他浏览器的特性
+42.总结前端性能优化的解决方案
+43.懒加载和预加载
+44.es6 class 和 普通构造函数的区别
+45.react和vue两大框架如何选择
+46.什么是MVVM,与MVC有什么区别
+47.什么是 Virtual Dom
+https://blog.csdn.net/weixin_39848007/article/details/110214317
+48.hash模式 和  history模式
+
+49.react和vue的区别
+https://www.cnblogs.com/yangyangxxb/p/10105856.html
+
+50.react界面完全由数据驱动
+http://tangguangyao.github.io/2016/01/30/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E7%9A%84%E4%BB%B7%E5%80%BC/
+
+51.为什么要分割展示组件和容器组件
+52.react中调用setstate之后发生了什么
+53.react中 element 和 component的区别
+54.在什么情况下会选择使用 class component 而不是 function component
+55.react中 refs的作用是什么
+56.react生命周期
+57.为什么虚拟dom会提高性能
+58.react 的 redux
+59.vue生命周期 
+60.拦截数据的方法
+61.盒模型
+62.vue 双向绑定原理
+63.vue 路由实现原理
+64.vue组件通讯
+65.vue和seo
+66.vue优缺点
+https://www.jianshu.com/p/f51b1a1b9485
+67.指令keep-alive
+68.如何人css只在当前组件起作用
+69.vue 变化检测问题
+70.vuex
+71.less sass
+72.本地存储
+73.vue路由钩子函数
+74.怎么封装全局组件使用 
+http://ms200.cn/archives/1521   vue
+75.你所使用的 所有UI框架 （看自己）
+76.（小程序开发）（app开发）
+
+77..React Hooks 
+https://www.cnblogs.com/bbcfive/p/12210617.html
+78.
+
+MVVM模式中ViewModel和View、Model有什么区别
+https://www.cnblogs.com/eric-qin/p/11298877.html
+
+
+TCP/IP协议
+
+
+	
+HTML ：XHTML ? HTML 5 ? CSS ? TCP/IP
+
+
+
+
+XML：
+XML ? XSL ? XSLT ? XSL-FO ? XPath ? XPointer ? XLink ? DTD ? XML Schema ? DOM ? XForms ? SOAP ? WSDL ? RDF ? RSS ? WAP ? Web Services
+
+
+
+
+Web脚本	
+JavaScript ? HTML DOM ? DHTML ? VBScript ? AJAX ? jQuery ? JSON ? E4X ? WMLScript
+Serv脚本	
+SQL ? ASP ? ADO ? PHP
+.NET	
+Microsoft.NET ? .NET Mobile
+
+多媒体	
+SMIL ? SVG
+
+
+
+
+
+
+
