@@ -1,0 +1,14 @@
+安装java 
+
+安装 idea  
+
+把 jetbrains-agent.jar  文件放到一个目录下 
+
+找到idea64 下的  idea64.exe.vmoptions  记事本打开 添加代码
+
+示例:
+ mac: -javaagent:/Users/neo/jetbrains-agent.jar
+ linux: -javaagent:/home/neo/jetbrains-agent.jar
+ windows: -javaagent:C:\Users\neo\jetbrains-agent.jar
+
+

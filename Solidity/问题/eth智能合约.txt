@@ -1,0 +1,44 @@
+1. 智能合约 solidity  官网 https://solidity-cn.readthedocs.io/zh/develop/types.html
+
+2.python 环境配制 https://www.cnblogs.com/xcc-/p/xcc02.html
+
+3.ganache安装包 https://blog.csdn.net/weixin_42648261/article/details/105563923
+
+4.remix solidity 基本使用  https://blog.csdn.net/yujuan110/article/details/83927413
+
+5.web3.js与智能合约交互  https://www.cnblogs.com/jiangwangxiang/articles/10616055.html
+
+6.用web3.js与智能合约交互  https://blog.csdn.net/zhj_fly/article/details/79458467?utm_source=blogkpcl8
+
+7.Windows10下安装Truffle工具  https://blog.csdn.net/xuecuilan/article/details/90379919
+
+
+8.笔名辉哥：第一课 如何在WINDOWS环境下搭建以太坊开发环境
+
+https://www.jianshu.com/p/a7880be9b46e
+
+9.付费solidity学习 http://xc.hubwiz.com/class/5a952991adb3847553d205d1/#1/7
+
+10.Solidity学习教程 
+
+https://blog.csdn.net/qq_33829547/article/details/80361886
+
+11.Solidity学习（一） 
+https://blog.csdn.net/weixin_51194902/article/details/112266013
+
+12.remix 官网 
+https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html
+
+13.remix ide 
+
+https://remix.ethereum.org/#optimize=true&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js
+
+前端交互
+
+https://www.zhihu.com/people/liu-jian-60-54/posts?page=8
+
+前端交互2
+https://blog.csdn.net/yang731227/article/details/83315827
+
+
+  

@@ -1,0 +1,59 @@
+1.从页面到输入网址到渲染完成经历了哪些过程？
+（1）输入网址
+（2）发送DNS服务器，并获取域名对应的web服务器对应的ip地址
+（3）与web服务器建立TCP连接；
+（4）浏览器向web服务器发送http请求；
+（5）web服务器响应请求，并返回指定url的数据（或错误信息，或重定向的新的url地址）
+（6）浏览器下载web服务器返回的数据及解析html源文件
+（8）生成DOM树，解析css和js，渲染页面，直至显示完成
+ 分析：输入网址，获取域名下web服务器的ip
+                 与web服务器建立连接
+                 发送http接口请求，接口返回数据
+                 浏览器下载返回的数据和解析html源文件
+                生成dom树 ，解析css和js，渲染页面，直到完成
+
+2.总结前端性能优化的解决方案
+  （1）多使用内存、缓存或者其他方法
+          减少 CPU 和GPU 计算，更快展现
+        1、CPU是电脑的中央处理器。
+        2、GPU是电脑的图形处理器。
+  总结前端性能优化的解决方案：https://blog.csdn.net/YYT_0109/article/details/88538144
+  web前端缓存（CDN缓存）：  https://blog.csdn.net/free_xiaochen/article/details/78239381
+  静态资源缓存：https://zhuanlan.zhihu.com/p/30780216
+
+3.为什么虚拟dom会提高性能	
+ 什么是虚拟dom
+1.虚拟DOM其实就是一个JavaScript对象。通过这个JavaScript对象来描述真实DOM。
+ 为啥真实dom操作不推荐
+ 2.真实dom操作，一般都会对某块元素的整体重新渲染
+ 为啥虚拟dom能提升性能
+ 3.采用虚拟dom的话 ，当数据变化的时候，只需要局部刷新变化的位置就好了。
+  https://www.cnblogs.com/crazycode2/p/12109695.html
+  虚拟dom相当于在js和真实dom中间加了一个缓存，利用dom diff算法避免了没有必要的dom操作，从而提髙性能。 具体实现步骤如下： 1． 用JavaScript对象结构表示DOM树的结构；然后用这个树构建一个真正的DOM树，插到文档当中 2．当状态变更的时候，重新构造一棵新的对象树。然后用新的树和旧的树进行比较，记录两棵树差异 3．把2所记录的差异应用到步骤1所构建的真正的DOM树上，视图就更新了。 
+参考链接：https://www.zhihu.com/question/29504639?sort=created
+
+
+4.懒加载和预加载
+	https://www.jianshu.com/p/e27b3e34f86d
+5.常用的浏览器内核 
+https://blog.csdn.net/qq_36647038/article/details/81269238
+6.AMD 和 CMD 的区别
+https://blog.csdn.net/jackwen110200/article/details/52105493
+
+7.常见的web安全及防护原理
+被插入广告防护：
+https://blog.csdn.net/weixin_30892763/article/details/95332591?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.pc_relevant_baidujshouduan&spm=1001.2101.3001.4242
+
+https://blog.csdn.net/wy1002003/article/details/51783623?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.pc_relevant_baidujshouduan&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.pc_relevant_baidujshouduan
+
+8.XSS和CSRF的区别
+https://blog.csdn.net/m0_37631322/article/details/81346335
+9.前端需要注意那些seo
+https://blog.csdn.net/xiaoxueqiu1987/article/details/77196543
+10.http和https
+https://www.cnblogs.com/wqhwe/p/5407468.html
+
+ser 和 ssr  
+
+边缘渲染框架 
+

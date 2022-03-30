@@ -1,0 +1,27 @@
+$.ajax({
+                     type: "GET",
+                     url:
+					 "http://juhe.m.kele55.com/reportdevice/reportData_5_1.do"
+					 +'?action_type='+ '10000000'
+					 +'&done_number='+'0'
+					 +'&anchor_id='+'0'
+					 +'&room_id='+'0'
+					 +'&gift_id='+'0'
+					 +'&gift_number='+'0'
+					 +'&init_random='+'0'
+					 +'&homePage='+'1'
+					 +'&extra_json='+ returnCitySN['cip'] +' 50300010074'
+					 +'&jsonpCallback=?'
+					 ,
+					 dataType:"jsonp",
+					 contentType:"application/json",
+                     beforeSend: function(request) {
+                        request.setRequestHeader("Test", "Chenxizhang");
+                    },
+	                   success: function(result) {
+                        console.log('success')
+                   },
+				    error: function(result) {
+						console.log('error')
+					}
+                });

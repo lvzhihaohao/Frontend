@@ -1,0 +1,423 @@
+疑难杂症问题
+
+1.常见的node版本问题，如果处理较多的项目时，一些项目比较老旧，一些项目比较新，当前node版本与node_sass版本不对应，就会报错，
+解决办法：修改package.josn文件  把里面的node版本与node_sass版本改为与你下载的node对应的 就行了
+
+2.ie8一下兼容，请求接口，请求接口的时候，由于一些接口写的特殊性，可能导致接口无法请求成功，
+ 解决办法：使用手写ajax的方法 ie8下使用 new XDomainRequest()  请求方式请求
+                或者使用ajax的jsonp请求
+
+3.ie8一下不兼容圆角边框等css新特性，
+  解决办法：使用一个 PIE.htc  引入到使用css新特性的地方
+
+4.二级三级域，请求解决拿不到请求头参数，可以在js里设置domin  
+
+5.根据条件播放音频无法自动播放，除非主动点击事件播放， 可以先在音频组件上写入autoplay等自动播放事件，将音频组件隐藏，条件允许时，音频组件显示出来，就可以自动播放了。然后播放完之后，再将其隐藏，
+
+6.兼容样式问题，ie低版本不支持display：flex 改为，display：table 或者使用定位布局
+
+
+
+功能问题.
+
+1.h5网页中 做聊天输入框，输入框固定到页面底部，当不同型号的手机启动输入框抬起键盘的时候，键盘会遮盖一点输入框，微信里和安卓机没有这个问题，ios常见，无法解决
+
+2.计算问题，因js中加减乘除 ，/*+-不精准，可以使用网上的一些办法，提高精准度
+
+3. input框+第三方表情库的时候，会出现表情输入到文字前面或者中间的情况，输入坐标不精准，在网页中，建议js手写插入表情时，input框输入的坐标
+
+4.组件内大量参数来回使用时，建议使用vuex 和redux
+
+5.React 中setState更新state何时同步何时异步？ 普通调用异步，事件绑定下和定时器下同步，函数式修改同步
+https://www.jianshu.com/p/799b8a14ef96
+
+
+
+框架问题：
+
+1.react生命周期：
+1.1.constructor()    
+constructor()中完成了React数据的初始化，它接受两个参数：props和context，需使用super()传入这两个参数。
+
+1.2.componentWillMount()
+componentWillMount()一般用的比较少，它更多的是在服务端渲染时使用。它代表的过程是组件已经经历了constructor()初始化数据后，但是还未渲染DOM时。
+
+1.3.componentDidMount()
+组件第一次渲染完成，此时dom节点已经生成，可以在这里调用ajax请求，返回数据setState后组件会重新渲染
+
+2.1. componentWillReceiveProps (nextProps)
+在接受父组件改变后的props需要重新渲染组件时用到的比较多，接受一个参数nextProps，从而重新渲染组件
+
+2.2.shouldComponentUpdate(nextProps,nextState)
+主要用于性能优化(部分更新)  子组件的该生命周期中做判断
+
+2.3.componentWillUpdate (nextProps,nextState)
+组件进入重新渲染的流程，可以拿到nextProps和nextState。
+
+2.4.componentDidUpdate(prevProps,prevState)
+组件更新完毕后，里可以拿到prevProps和prevState，即更新前的props和state。
+2.5.render()
+
+1.4.componentWillUnmount ()	
+在此处完成组件的卸载和数据的销毁。
+
+https://www.jianshu.com/p/b331d0e4b398
+
+
+3.react路由  https://blog.csdn.net/chen4565/article/details/119257544
+
+ index.js   react-router-dom   ReactDOM.render( BrowserRouter  )
+   <Link className="list-group-item" to="/home">Home</Link>
+   <Route path="/home" component={Home}/>
+<NavLink activeClassName="add" className="list-group-item" to="/home">Home</NavLink>
+
+路由下子路由
+<Switch>
+	<Route path="/home" component={Home}/>
+	<Route path="/about" component={About}/>
+</Switch>
+重定向 Redirect 
+传递参数    
+<Link to='/demo/test/tom/18'}> params参数
+<Link to='/demo/test?name=tom&age=18'}> search参数
+ <Link to={{pathname:'/demo/test',state:{name:'tom',age:18}}}>   state参数
+
+7.react 的 redux的使用
+创建store.js文件 中引入redux  CreateStore创建redux，
+CreateStore中引入reducers 单个 页面的 reducers 的js文件
+CreateStore中引入 applyMiddleware 与thunk中间件链接 
+创建action文件夹 写入action.js文件
+创建 reducers文件夹 写入action文件
+action文件夹 写入getinfo方法 
+reducers 引入action方法 创建函数名 info 判断type 返回对应数据
+页面中引入 action 中的 getinfo方法
+创建stateProps对象，里面写reducers函数名
+创建dispathprops 返回 action 函数 
+页面底部抛出 connect中间件  里面链接 statesprops 和 dispatchprops方法 
+componentDidMount 中调用 action 中引入的 getinfo方法
+页面中直接使用 stateprops 中的info使用
+
+简化版
+1.创建store文件，引入创建redux, 引入reduces中的文件
+2.创建action，创建reduces，文件夹
+3.action创建调用方法 reduces 创建status状态
+4.页面中使用中间件将action方法和reduces连接
+5.初始函数直接调用 action方法改变status ，页面直接使用status
+
+
+8.react hook的使用
+
+9.react 接受props参数
+this.$ref调用子组件
+this.props.auto 调用父组件
+
+2. vue生命周期：
+new vue()
+beforeCreate( 创建前 )，el 和 data 并未初始化，
+created ( 创建后 ）
+beforeMount  把data里面的数据和模板生成html，完成了el和data 初始化，，注意此时还没有挂在html到页面上。
+mounted
+挂在完成，也就是模板中的HTML渲染到HTML页面中，此时一般可以做一些ajax操作，mounted只会执行一次。
+beforeUpdate
+在数据更新之前被调用，发生在虚拟DOM重新渲染和打补丁之前，可以在该钩子中进一步地更改状态，不会触发附加地重渲染过程
+updated（更新后）
+在由于数据更改导致地虚拟DOM重新渲染和打补丁只会调用，调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作，然后在大多是情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环，该钩子在服务器端渲染期间不被调用
+beforeDestroy（销毁前）在实例销毁之前调用，实例仍然完全可用，
+destroyed（销毁后）
+在实例销毁之后调用，调用后，所以的事件监听器会被移出，所有的子实例也会被销毁，该钩子在服务器端渲染期间不被调用
+
+
+4.vue路由
+index.js 引入页面 挂载main 使用 push跳转
+
+5.vue全局挂载方法
+
+6.vuex的使用
+ store文件夹  index.js文件引入vuex
+main.js挂载 index.js
+index.js  new Vuex.Store（{}）
+index.js 引入其他 的页面的js
+auto.js 中 写入state {}
+写入 mutations 方法 第一个参数state 修改 第二个参数传递来的参数
+写入Action 方法 第一个参数context ,第二个参数传递过来的值  context .commit(name,value)  调用mutations
+页面中引入 mapGetter，mapActions
+computed 中使用 引入的参数和方法
+普通使用：this.$store.dispatch('getaddcount',1)
+引入使用：
+
+虚拟dom问题：
+
+框架对比问题：
+　共同点：
+
+　　　　a、都使用虚拟dom
+
+　　　　b、提供了响应式和组件化的视图组件
+ 区别：
+   优化，数据绑定，状态管理，路由，渲染性能，开发模式和规模，使用场景，服务端渲染
+1.优化
+在 React 应用中，当某个组件的状态发生变化时，它会以该组件为根，重新渲染整个组件子树。
+你需要在所有可能的地方使用 PureComponent，
+或是手动实现 shouldComponentUpdate 方法。
+　在 Vue 应用中，组件的依赖是在渲染过程中自动追踪的，
+以系统能精确知晓哪个组件确实需要被重渲染。
+
+2.vue是双向绑定， Vue.js 最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。
+v-model
+vue的依赖追踪是通过 Object.defineProperty 把对象的属性全部转为 getter/setter来实现的；当改变数据的某个属性值时，会触发set函数,获取该属性值的时候会触发get函数，当数据改变时才会触发视图的改变，反过来在操作视图时，只能通过DOM事件来改变数据，再由此来改变视图，以此来实现双向绑定
+在同一个组件内，将数据和视图绑定起来，和父子组件之间的通信并无什么关联；
+通过对每一个属性建立Watcher来监听， 当属性变化的时候，响应式的更新对应的虚拟dom
+
+react是单向数据流；是在View层直接写JS代码Model层中的数据拿过来渲染，一旦像表单操作、触发事件、ajax请求等触发数据变化，则进行双同步 ，setState之后会重新走渲染的流程
+3.开发模式及规模
+React本身，是严格的view层，MVC模式
+Vue是MVVM模式的一种方式实现
+
+4.使用场景
+vue 模板引擎 很难去测试，重构和分解。
+react Javascript模板可以组织成具有很好的分解性和干（DRY）代码的组件，
+但是，页面大小是与所有项目有关的，这方面Vue再次领先，它目前的版本压缩后只有25.6KB。
+5.服务端渲染
+. 请求一个html -> 2. 服务端请求数据( 内网请求快 ) -> 3. 服务器初始渲染（服务端性能好，较快） -> 4. 服务端返回已经有正确内容的页面 -> 5. 客户端请求js/css文件 -> 6. 等待js文件下载完成 -> 7. 等待js加载并初始化完成 -> 8. react-dom( 客户端 )把剩下一部分渲染完成( 内容小，渲染快 )
+- 更好的 SEO，由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面
+
+vue优点“
+模板搭建应用”
+
+
+什么是单页面：
+1.单页Web应用（single page web application，SPA）。
+2.整个应用只有一个完整的页面。
+3.点击页面中的链接不会刷新页面，只会做页面的局部更新。
+4.数据都需要通过ajax请求获取, 并在前端异步展现。
+
+
+框架渲染问题：
+react：
+　React 的渲染建立在 Virtual DOM 上——一种在内存中描述 DOM 树状态的数据结构。当状态发生变化时，React 重新渲染 Virtual DOM，比较计算之后给真实 DOM 打补丁。
+在超大量数据的首屏渲染速度上，React 有一定优势，因为 Vue 的渲染机制启动时候要做的工作比较多，而且 React 支持服务端渲染。
+
+　Vue 通过建立一个虚拟 DOM 对真实 DOM 发生的变化保持追踪。
+　vue渲染的过程如下：
+  new Vue，
+  挂载$mount方法，通过自定义Render方法、template、el等生成Render函数
+通过Watcher监听数据的变化
+当数据发生变化时，Render函数执行生成VNode对象
+.通过patch方法，对比新旧VNode对象，通过DOM Diff算法，添加、修改、删除真正的DOM元素
+
+总结一下，我们发现，
+
+
+- Vue的优势包括：
+- 模板和渲染函数的弹性选择
+- 简单的语法及项目创建
+- 更快的渲染速度和更小的体积
+
+
+- React的优势包括：
+- 更适用于大型应用和更好的可测试性
+- 同时适用于Web端和原生App
+- 更大的生态圈带来的更多支持和工具
+- 而实际上，React和Vue都是非常优秀的框架，它们之间的相似之处多过不同之处，并且它们大部分最棒的功能是相通的：
+- 利用虚拟DOM实现快速渲染
+- 轻量级
+- 响应式和组件化
+- 服务器端渲染
+- 易于集成路由工具，打包工具以及状态管理工具
+- 优秀的支持和社区
+
+3.为什么虚拟dom会提高性能	
+ 什么是虚拟dom
+1.虚拟DOM其实就是一个JavaScript对象。通过这个JavaScript对象来描述真实DOM。
+ 为啥真实dom操作不推荐
+ 2.真实dom操作，一般都会对某块元素的整体重新渲染
+ 为啥虚拟dom能提升性能
+ 3.采用虚拟dom的话 ，当数据变化的时候，只需要局部刷新变化的位置就好了。
+ 虚拟dom相当于在js和真实dom中间加了一个缓存，利用dom diff算法避免了没有必要的dom操作，从而提髙性能。 具体实现步骤如下
+
+
+组件优化问题：
+
+SSR
+
+.总结前端性能优化的解决方案
+静态资源的压缩合并 雪碧图
+静态离线资源缓存  
+HTML5 Application Cache  增加manifest文件
+Service Worker，需要添加一个Service Worker的js的文件，然后在我们的html页面中注册对这个文件的引用。
+Service Worker生命周期有三部曲：注册，安装和激活。
+使用 CDN 让资源加载更快
+
+页面渲染优化
+懒加载（图片懒加载、下拉加载更多）
+减少DOM 查询，对 DOM 查询做缓存
+减少DOM 操作，多个操作尽量合并在一起执行
+
+XSS 防止攻击：
+攻击者在网站上注入恶意的客户端代码，链接，输入
+HttpOnly 防止劫取 Cookie
+输入检查
+输出检查
+
+ CSRF防止攻击：
+验证码
+Referer Check
+
+canvas问题：
+
+
+
+saccs scss 问题：
+允许变量 条件语句 
+变量 $开头
+特殊变量 #{}写入
+默认变量
+算法 嵌套 属性嵌套
+
+style css display 布局问题：
+
+hmtl5
+语义化标签
+增强型表单 input 输入类型
+音视频
+canvas
+SVG 与 Canvas两者间的区别
+SVG 是一种使用 XML 描述 2D 图形的语言。
+Canvas 通过 JavaScript 来绘制 2D 图形。
+
+WebSocket是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。在WebSocket API中，浏览器和服务器只需要做一个握手的动作，然后，浏览器和服务器之间就形成了一条快速通道。两者之间就直接可以数据互相传送。浏览器通过 JavaScript 向服务器发出建立 WebSocket 连接的请求，连接建立以后，客户端和服务器端就可以通过 TCP 连接直接交换数据。当你获取 Web Socket 连接后，你可以通过 send() 方法来向服务器发送数据，并通过 onmessage 事件来接收服务器返回的数据
+
+多语言问题：
+vue-i18n  vuex里面引入data.josn 页面里调用vuex方法，渲染页面
+react redux里面引入 data.josn 页面引入方法 渲染页面
+
+
+js原生，闭包，原型链，继承指向，去重，等多种基础问题：
+
+1.
+浅拷贝 a.copy()   拷贝一层数据格式 多了不行
+深拷贝  b.deepcopy（）拷贝多层数据格式，属性等东西
+
+ https://www.jianshu.com/p/0f07e0036c1d  
+
+
+微任务，宏任务的区别
+js 是单线程执行的，js中的任务按顺序一个一个的执行，但是一个任务耗时太长；
+那么后面的任务就需要等待，为了解决这种情况，将任务分为了同步任务和异步任务；
+而异步任务又可以分为微任务和宏任务。
+宏任务：
+setTimeout
+setInterval
+微任务
+process.nextTick方法
+Promise的then方法
+js主代码
+如果有微任务就先执行微任务 再执行红任务
+
+es6 
+https://zhuanlan.zhihu.com/p/102442557
+
+1.let，const 箭头函数
+2.import、export、module模块化
+3....展开运算符可以将数组或对象里面的值展开；还可以将多个值收集为一个变量
+4.class 面向对象编程 https://blog.csdn.net/weixin_45846139/article/details/106988254
+
+.async promnis 
+Pending（进行中）
+resolve(num);  成功回调
+ reject(num);    失败回调
+https://www.jianshu.com/p/7676c9e84a53
+
+
+var、let和const的区别？
+1.var可重复声明，并且有变量提升
+2.let不能进行重复声明，没有变量提升
+
+懒加载：滑动页面加载
+预加载：加载缓存
+
+5.常用的浏览器内核 
+Chrome  Webkit  V8引擎
+IE Trident  Chakra引擎
+6.盒模型
+
+AMD,
+AMD定义模块的时候就要声明其依赖的模块
+CMD 在用到某个模块的时候再去require
+
+,DOM,
+document 文档对象模型。是HTML和XML的API，整个页面规划成由节点层级构成的文档。
+了操作 HTML 中的元素
+BOM，浏览器对象模型 。控制浏览器的行为而出现的接口
+比如跳转到另一个页面、前进、后退 location.href  BOM也包含了DOM(对象)
+Window 
+window 也是 BOM 的一个对象
+Window 对象是 JavaScript 层级中的顶层对象。
+Window 对象代表一个浏览器窗口或一个框架。
+
+MVVM 模型，
+Model-View-ViewModel的简写。它本质上就是MVC 的改进版。
+我给view里面的各种控件也定义一个对应的数据对象，这样，只要修改这个数据对象，view里面显示的内容就自动跟着刷新，而在view 里做了任何操作，这个数据对象也跟着自动更新
+ViewModel就是View与Model的连接器，View与Model通过ViewModel实现双向绑定。 
+
+MVC
+界面上的每个变化都是一个事件，我只需要针对每个事件写一堆代码，来把用户的输入转换成model里的对象就行了，
+
+XML可拓展性标记语言，宗旨是传输数据，W3C的标准推荐，
+标签自我描述性，可以发明自己的标签
+数据和html分离
+XML传输数据 HTML显示数据
+
+
+面向对象编程
+
+https://blog.csdn.net/bradmatt/article/details/80658689
+
+
+nuxt
+轻量级vue，没有路由，友好服务端渲染
+
+小程序
+nodejs一般用来做什么
+能够在服务器端运行的javascript
+webapck。入口出口，加载器，插件
+
+node.js
+Node.js 在浏览器外运行JavaScript引擎，，单线程 非阻塞I/O 事件驱动,适应于数据高并发，libuv绑定到单个线程上
+
+gulp是基于node的自动化构建工具
+1 自动压缩JS文件 css文件   编译sass
+2. 自动压缩图片 自动刷新浏览器
+gulp.task 创建任务
+.src 引入路径
+.watch  监视文件
+.pipe 传入方法的是一个function，这个function作用无非是接受上一个流（stream）的结果
+.dest   能被 pipe 进来，并且将会写文件。
+
+fs模块 ，操作文件，操作目录
+
+实时应用：socket  如在线聊天，实时通知推送等等
+稳定接口提升Web渲染能力
+webSocket相对http的优势
+webSocket服务端可以推送数据到客户端 
+客户端与服务器只需要一个TCP连接，比http长轮询使用更少的连接
+轻量的协议头，减少数据传输量
+
+webpack：
+webpack是把项目当做一个整体，通过给定义一个主文件，webpack将从这个主文件开始找到
+项目中所有依赖的文件，使用loaders类处理，最后打包成一个或者多个浏览器可识别的js文件
+
+请简述一下 webpack中loaders 和 plugin
+什么是loaders，loaders 是文件加载器，能够加载文件，进行编译打包到一处地方
+什么是 plugin ，plugin是监听事件的，
+比如 加载文件，只能用 babel-loader 加载其他文件就需要 css-loader ，file-loader，
+可以扩展webpack功能的，做一些复杂的东西
+
+h5:
+1.双击页面放大
+
+2.em
+
+
+
+
