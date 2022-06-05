@@ -1,0 +1,14 @@
+@font-face{
+    font-family:'FZLTHJ';     
+    src:url('../../../static/img/FZLTHJ.OTF') format('opentype'),
+        url('../../../static/img/FZLTHJW.TTF') format('truetype');        
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face{
+    font-family:'FZXIYSJ';     
+    src:url('../../../static/img/FZXIYSJ.OTF') format('opentype'),
+        url('../../../static/img/FZXIYSJW.ttf') format('truetype');   
+        font-weight: normal;
+        font-style: normal;
+}

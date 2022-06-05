@@ -1,0 +1,640 @@
+body {
+  direction: rtl;
+}
+
+.owl-carousel, .bx-wrapper {
+  direction: ltr;
+}
+
+.owl-carousel .owl-item {
+  direction: rtl;
+}
+
+[dir='rtl'] .slick-slide {
+  float: left !important;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  direction: ltr !important;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+.startp-nav nav .navbar-nav {
+  margin-left: 0 !important;
+  margin-right: auto;
+}
+
+.startp-nav nav .navbar-nav .nav-item a span {
+  left: 4px;
+  right: auto;
+}
+
+.startp-nav nav .navbar-nav .nav-item .dropdown_menu {
+  text-align: right;
+  left: auto;
+  right: 0;
+}
+
+.startp-nav nav .navbar-nav .nav-item .dropdown_menu li .dropdown_menu {
+  right: 220px;
+  left: auto;
+}
+
+.startp-nav nav .others-option {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.startp-nav nav .others-option .btn.btn-light {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.main-banner .offset-lg-1 {
+  margin-right: 8.333333%;
+  margin-left: 0;
+}
+
+.main-banner .hero-content {
+  text-align: right;
+}
+
+.main-banner .banner-form {
+  text-align: right;
+  margin-left: 0 !important;
+  margin-right: 1rem;
+}
+
+.hosting-main-banner .hosting-banner-content {
+  text-align: right;
+}
+
+.hosting-main-banner .hosting-banner-content ul li {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.hosting-main-banner .hosting-banner-content ul li::before {
+  left: auto;
+  right: 0;
+}
+
+.repair-banner-content {
+  text-align: right;
+}
+
+.iot-banner-image {
+  right: auto;
+  left: 30px;
+}
+
+.iot-banner-content {
+  text-align: right;
+}
+
+.animate-border span {
+  left: 26%;
+}
+
+.repair-about-content {
+  text-align: right;
+}
+
+.repair-about-content ul li span svg {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.domain-search-content form .form-control {
+  float: right;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.domain-search-content form .domain-select {
+  float: right;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.domain-search-content form button {
+  float: right;
+}
+
+.domain-search-content ul li:first-child {
+  border-left: 1px solid #eeeeee;
+}
+
+.domain-search-content ul li:last-child {
+  border: none;
+}
+
+.single-box {
+  text-align: right;
+}
+
+.services-content {
+  text-align: right;
+}
+
+.services-content .section-title {
+  text-align: right;
+}
+
+.services-content .box svg {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.faq-accordion {
+  text-align: right;
+}
+
+.faq-accordion .accordion .accordion__item .accordion__button {
+  text-align: right;
+}
+
+.faq-accordion .accordion .accordion__item .accordion__button::before {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.faq-contact {
+  text-align: right;
+}
+
+.single-features {
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 95px;
+}
+
+.single-features .icon {
+  left: auto;
+  right: 20px;
+}
+
+.why-choose-us .section-title {
+  text-align: right;
+}
+
+.why-choose-us-image img:nth-child(1) {
+  left: auto;
+  right: -20px;
+}
+
+.contact-cta-box {
+  text-align: right;
+  padding-right: 30px;
+  padding-left: 210px;
+}
+
+.contact-cta-box .btn {
+  right: auto;
+  left: 30px;
+}
+
+.single-works {
+  text-align: right;
+}
+
+.single-works .icon {
+  right: auto;
+  left: 20px;
+}
+
+.feedback-slides .client-feedback .single-feedback {
+  text-align: right;
+  padding-left: 40px;
+  padding-right: 170px;
+}
+
+.feedback-slides .client-feedback .single-feedback .client-img {
+  left: auto;
+  right: 40px;
+}
+
+.single-feedback-item .client-info .image {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.single-feedback-item .client-info .title {
+  text-align: right;
+}
+
+.single-repair-feedback .client-img {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 108px;
+}
+
+.single-repair-feedback .client-img img {
+  left: auto;
+  right: 0;
+}
+
+.cta-iot-content {
+  text-align: right;
+}
+
+.woocommerce-topbar {
+  text-align: right;
+}
+
+.modal-content .products-content {
+  text-align: right;
+}
+
+.modal-content .products-content form button {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.modal-content .products-content form .quantity .plus-btn {
+  border-right: none;
+  border-left: 1px solid #eeeeee;
+  padding-left: 8px;
+  padding-right: 0;
+}
+
+.modal-content .products-content form .quantity .minus-btn {
+  top: -1px;
+  border-right: 1px solid #eeeeee;
+  border-left: none;
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+.modal-content .products-content .product-meta span {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.modal-content button.close {
+  right: auto;
+  left: 2%;
+}
+
+.products-details {
+  text-align: right;
+}
+
+.products-details form .quantity {
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.products-details form .quantity span {
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.products-details form .quantity .plus-btn {
+  border-right: none;
+  border-left: 1px solid #eeeeee;
+  padding-left: 8px;
+  padding-right: 0;
+}
+
+.products-details form .quantity .minus-btn {
+  top: -1px;
+  border-right: 1px solid #eeeeee;
+  border-left: none;
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+.products-details form .add-to-wishlist-btn {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.products-details .products-share-social span {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.products-details-tabs .content {
+  text-align: right;
+}
+
+.products-details-tabs .content .additional-information {
+  text-align: right;
+}
+
+.products-details-tabs .content .products-reviews {
+  text-align: right;
+}
+
+.cart-totals {
+  text-align: right;
+}
+
+.cart-totals ul li span {
+  float: left;
+}
+
+.continue-shopping-box {
+  text-align: right;
+}
+
+.cart-table table {
+  text-align: right;
+}
+
+.cart-table table tbody tr td a svg {
+  margin-left: 0;
+  margin-right: 9px;
+}
+
+.user-actions {
+  text-align: right;
+}
+
+.billing-details {
+  text-align: right;
+}
+
+.form-check {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+.form-check-input {
+  margin-left: 0;
+  margin-right: -1.25rem;
+}
+
+.order-details {
+  text-align: right;
+}
+
+.order-details .order-table table {
+  text-align: right;
+}
+
+.order-details .payment-method p [type="radio"]:checked + label, .order-details .payment-method p [type="radio"]:not(:checked) + label {
+  padding-left: 0;
+  padding-right: 27px;
+}
+
+.order-details .payment-method p [type="radio"]:checked + label::before, .order-details .payment-method p [type="radio"]:not(:checked) + label::before {
+  left: auto;
+  right: 0;
+}
+
+.order-details .payment-method p [type="radio"]:checked + label::after, .order-details .payment-method p [type="radio"]:not(:checked) + label::after {
+  left: auto;
+  right: 3px;
+}
+
+#contactForm {
+  text-align: right;
+}
+
+.coming-soon-content form .submit-btn {
+  left: 3px;
+  right: auto;
+}
+
+.blog-details-area .offset-lg-2 {
+  margin-left: 0;
+  margin-right: 16.666667%;
+}
+
+.blog-details-area .blog-details {
+  text-align: right;
+}
+
+.blog-details-area .blog-details .article-img .date {
+  right: auto;
+  left: 15px;
+}
+
+.blog-details-area .post-controls-buttons .controls-right {
+  float: left;
+}
+
+.blog-details-area .post-controls-buttons .controls-left {
+  float: right;
+}
+
+.blog-details-area .post-comments {
+  text-align: right;
+}
+
+.blog-details-area .post-comments .single-comment {
+  padding-left: 0;
+  padding-right: 95px;
+}
+
+.blog-details-area .post-comments .single-comment .comment-img {
+  left: auto;
+  right: 0;
+}
+
+.blog-details-area .post-comments .single-comment .comment-content a {
+  right: auto;
+  left: 0;
+}
+
+.blog-details-area .leave-a-reply {
+  text-align: right;
+}
+
+.single-services-box {
+  text-align: right;
+}
+
+.cta-content {
+  text-align: right;
+}
+
+.cta-right-content {
+  text-align: left;
+}
+
+.cta-right-content .buy-btn {
+  padding-right: 35px;
+  padding-left: 0;
+}
+
+.about-content {
+  text-align: right;
+}
+
+.about-content .section-title {
+  text-align: right;
+}
+
+.about-text {
+  text-align: right;
+}
+
+.services-details {
+  text-align: right;
+}
+
+.products-details-image ul {
+  padding-right: 0;
+}
+
+.project-details-desc {
+  text-align: right;
+}
+
+.project-details-desc .project-details-information .single-info-box {
+  float: right;
+}
+
+.iot-features-content {
+  text-align: right;
+}
+
+.ready-to-talk span a {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.single-blog-post {
+  text-align: right;
+}
+
+.single-blog-post .blog-image .date {
+  left: auto;
+  right: 20px;
+}
+
+.single-blog-post .blog-post-content span a {
+  margin-left: 0;
+  margin-right: 2px;
+}
+
+.single-blog-post .blog-post-content .read-more-btn:hover svg {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.cta-repair-content {
+  text-align: right;
+}
+
+.cta-repair-img {
+  text-align: left;
+}
+
+.single-footer-widget {
+  text-align: right;
+}
+
+.single-footer-widget ul.footer-contact-info li {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.single-footer-widget ul.footer-contact-info li svg {
+  left: auto;
+  right: 0;
+}
+
+.single-footer-widget ul.social-links li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.single-footer-widget ul.list li a:hover {
+  padding-left: 0;
+  padding-right: 7px;
+}
+
+.go-top {
+  right: auto;
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .startp-nav nav .navbar-nav {
+    text-align: right;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown_menu li {
+    border-left: none !important;
+    border-right: 1px dashed #eeeeee;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown_menu li .dropdown_menu {
+    right: 0 !important;
+  }
+  .main-banner .offset-lg-1 {
+    margin-right: 0;
+  }
+  .single-features {
+    padding-right: 20px;
+  }
+  .contact-cta-box .btn {
+    left: 0;
+  }
+  .single-works .icon {
+    right: auto !important;
+    left: 5px;
+  }
+  .domain-search-content form .domain-select {
+    padding-left: 0;
+  }
+  .single-repair-feedback .client-img {
+    padding-left: 0 !important;
+    padding-right: 85px;
+  }
+  .coming-soon-content form .submit-btn {
+    left: 0;
+  }
+  .blog-details-area .offset-lg-2 {
+    margin-right: 0;
+  }
+  .blog-details-area .post-comments .single-comment {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .startp-nav nav .navbar-nav .nav-item .dropdown_menu {
+    left: auto !important;
+    right: -30px;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown_menu li .dropdown_menu {
+    right: 165px;
+  }
+  .main-banner .offset-lg-1 {
+    margin-right: 0;
+  }
+  .single-features {
+    padding-right: 20px;
+  }
+  .blog-details-area .offset-lg-2 {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .main-banner .offset-lg-1 {
+    margin-right: 0;
+  }
+  .main-banner .banner-image {
+    left: 60px;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .iot-banner-image {
+    right: auto !important;
+    left: 90px;
+  }
+  .animate-border span {
+    left: 25% !important;
+  }
+}
+/*# sourceMappingURL=rtl.css.map */

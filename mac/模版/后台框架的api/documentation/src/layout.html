@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Layout | Gull - Vuejs Admin Dashboard Template Documentation by UI Lib</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/doc.min.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="doc-header">
+
+      </div>
+
+      <div class="doc-content clearfix">
+        <div class="doc-content__sidebar"></div>
+
+        <div class="doc-content__body">
+
+
+          <h1 class="doc-section-title" id="select">
+            Gull Vue Layout System
+            <a href="#select" class="section-link"></a>
+          </h1>
+          <p class="lead">
+            In Gull Vue Js Admin Dashboard we offer two layouts.
+            <ol>
+              <li>Large SideBar</li>
+              <li>Compact SideBar</li>
+            </ol>
+
+          </p>
+
+          <h2 class="doc-section-title" id="single">
+            Layout Entry Point
+            <a href="#single" class="section-link"></a>
+          </h2>
+          <p><code>source\src\views\app\index.vue</code></p>
+
+
+          <div class="copy-code">
+            <button class="btn btn-sm btn-primary btn-clipboard" data-toggle="tooltip" data-placement="top"
+              title="Copy to clipboard">
+              Copy
+            </button>
+          </div>
+          <code class="code" data-code='<template>
+  <div>
+    <!-- <keep-alive> -->
+    <component :is="getThemeMode.layout"></component>
+    <!-- </keep-alive> -->
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  components: {},
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["getThemeMode"])
+  },
+  methods: {}
+};
+</script>
+'>
+          </code>
+
+          <h2 class="doc-section-title" id="multiple">
+            Layouts Name
+            <a href="#multiple" class="section-link"></a>
+          </h2>
+          <ol>
+            <li>large-sidebar</li>
+            <li>compact-sidebar</li>
+          </ol>
+
+          <p>
+            Layouts name come from Vuex and can easily changed by Customizer or if you want a single
+            layout then instead of binding property name in <code>:is=""</code> on
+            <code>source\src\views\app\index.vue</code>
+            use the Specific Layout Name such if you want to use comact sidebar than the code will be:
+          </p>
+
+
+          <div class="copy-code">
+            <button class="btn btn-sm btn-primary btn-clipboard" data-toggle="tooltip" data-placement="top"
+              title="Copy to clipboard">
+              Copy
+            </button>
+          </div>
+          <code class="code" data-code='<template>
+        <div>
+          <!-- <keep-alive> -->
+          <component :is="compact-sidebar"></component>
+          <!-- </keep-alive> -->
+        </div>
+      </template>
+      
+      <script>
+     // import { mapGetters, mapActions } from "vuex";
+      
+      export default {
+        components: {},
+        data() {
+          return {};
+        },
+        computed: {
+          //...mapGetters(["getThemeMode"])
+        },
+        methods: {}
+      };
+      </script>
+      '>
+                </code>
+
+
+
+
+        </div>
+
+        <div class="doc-content__secondary-sidebar">
+          <ul>
+            <li><a href="#select">Layputs System</a>
+              <ul>
+                <li><a href="#single">Layout Entry Point</a></li>
+                <li><a href="#multiple">Change Layout</a></li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="assets/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+
+    <script src="assets/vendor/clipboard.min.js"></script>
+
+    <script src="assets/js/es5/doc.js"></script>
+    <script src="assets/js/es5/header.min.js"></script>
+    <script src="assets/js/es5/sidebar.min.js"></script>
+  </body>
+
+</html>

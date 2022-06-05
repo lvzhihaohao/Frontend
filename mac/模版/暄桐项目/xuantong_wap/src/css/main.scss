@@ -1,0 +1,106 @@
+/* 宋简体 */
+
+.app-z-fonS {
+    font-family: 'FZXIYSJ';
+}
+
+
+/* 黑简体 */
+
+.app-z-fonH {
+    font-family: 'FZLTHJ'
+}
+
+// 表情弹起
+.Define_footFixed {
+    z-index: 10;
+    // height: auto;
+    .Evaluation-content {
+        width: auto;
+        height: 3.0625rem;
+        text-align: right;
+        font-family: "FZLTHJW--GB1-0";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 50px;
+        // background: red;
+        padding: 0;
+        overflow: none;
+        .Evaluation-editor {
+            margin-right: 5.625rem;
+        }
+        button {
+            position: absolute;
+        }
+        .w-e-toolbar {
+            display: none !important;
+            border: none !important;
+        }
+        .w-e-text-container {
+            height: 3.0625rem !important;
+            // padding: 8px 0;
+            padding-top: .8125rem;
+            line-height: 1.25rem;
+            .w-e-text p {
+                margin: 0;
+            }
+        }
+        .gu_p {
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            z-index: 1000;
+            border: 0;
+            color: #ccc;
+        }
+    }
+}
+
+// editor的菜单栏边框线
+.w-e-toolbar {
+    display: none;
+    border: none !important;
+}
+
+// #app{
+//   overflow: hidden ;
+// }
+//ios触屏僵硬
+
+/* 后台表情 */
+
+.braft-emoticon-wrap img {
+    width: 1.25rem!important;
+    height: 1.25rem!important;
+}
+
+
+/* 富文本图片问题 */
+
+.gu_beforepclass img {
+    margin: 10px auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.gu_beforepclass video {
+    outline: none;
+    margin: 10px auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* 富文本的线 */
+
+.gu_beforepclass hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #f5f5f5;
+}

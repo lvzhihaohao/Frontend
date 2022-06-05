@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>compact Sidebar | Gull - Vuejs Admin Dashboard Template Documentation by UI Lib</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/doc.min.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="doc-header">
+
+      </div>
+
+      <div class="doc-content clearfix">
+        <div class="doc-content__sidebar"></div>
+
+        <div class="doc-content__body">
+
+
+          <h1 class="doc-section-title" id="select">
+            Compact SideBar
+            <a href="#select" class="section-link"></a>
+          </h1>
+          <p class="lead">
+            Compact Sidebar is a Mordern and clean Layout which has Topbar and SideNav
+          </p>
+
+          <h2 class="doc-section-title" id="single">
+            Index.vue
+            <a href="#single" class="section-link"></a>
+          </h2>
+
+          <p>
+            <code>source\src\containers\layouts\compactSidebar\index.vue</code>
+          </p>
+          <p><code>``</code> need to replace with <code>''</code> such as <code>`dashboards`</code> With
+            <code>'dashboards'</code> </p>
+
+
+          <div class="copy-code">
+            <button class="btn btn-sm btn-primary btn-clipboard" data-toggle="tooltip" data-placement="top"
+              title="Copy to clipboard">
+              Copy
+            </button>
+          </div>
+          <code class="code" data-code='<template>
+  <div
+    :class="[
+      getCompactSideBarToggleProperties.isSideNavOpen ? `sidenav-open` : ``,
+      getcompactLeftSideBarBgColor
+    ]"
+    class="app-admin-wrap layout-sidebar-compact   clearfix"
+  >
+
+  <!-- 
+
+    getcompactLeftSideBarBgColor is for primary sidebar background color class
+    which is come from customzer via Vuex. 
+    Available classes are :
+
+    sidebar-gradient-purple-indigo
+   
+sidebar-gradient-black-blue
+
+
+sidebar-gradient-black-gray
+sidebar-gradient-steel-gray
+
+sidebar-dark-purple
+sidebar-slate-gray
+sidebar-midnight-blue
+sidebar-blue
+sidebar-indigo
+sidebar-pink
+sidebar-red
+sidebar-purple
+   -->
+    <compactSidebar></compactSidebar>
+    <!-- end-leftsidebar -->
+    <div class="main-content-wrap d-flex flex-column">
+      <compactTopbar></compactTopbar>
+      <router-view></router-view>
+    </div>
+  </div>
+</template>
+<script>
+import compactTopbar from "./compactTopbar";
+import compactSidebar from "./compactSidebar";
+import { mapGetters, mapActions } from "vuex";
+export default {
+  components: {
+    compactTopbar,
+    compactSidebar
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters([
+      "getCompactSideBarToggleProperties",
+      "getcompactLeftSideBarBgColor"
+    ])
+  }
+};
+</script>
+
+          
+          '>
+          </code>
+
+          <h2 class="doc-section-title" id="multiple">
+            Topbar
+            <a href="#multiple" class="section-link"></a>
+          </h2>
+
+          <p>
+            <code>source\src\containers\layouts\compactSidebar\compactTopbar.vue</code>
+          </p>
+          <p><code>``</code> need to replace with <code>''</code> such as <code>`dashboards`</code> With
+            <code>'dashboards'</code> </p>
+
+
+          <div class="copy-code">
+            <button class="btn btn-sm btn-primary btn-clipboard" data-toggle="tooltip" data-placement="top"
+              title="Copy to clipboard">
+              Copy
+            </button>
+          </div>
+          <code class="code" data-code='
+        <template>
+  <div class="main-header">
+    <div class="logo">
+      <img src="@/assets/images/logo.png" alt />
+    </div>
+
+    <div @click="compactSideBarToggle" class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <!-- Mega menu -->
+      <div
+        :class="{ show: isMegaMenuOpen }"
+        class="dropdown mega-menu d-none d-md-block"
+      >
+        <a
+          href="#"
+          class="btn text-muted dropdown-toggle mr-3"
+          id="dropdownMegaMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          @click="toggleMegaMenu"
+          >Mega Menu</a
+        >
+        <div
+          class="dropdown-menu text-left"
+          :class="{ show: isMegaMenuOpen }"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <div class="row m-0">
+            <div class="col-md-4 p-4 text-left bg-img">
+              <h2 class="title">
+                Mega Menu
+                <br />Sidebar
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Asperiores natus laboriosam fugit, consequatur.
+              </p>
+              <p class=" mb-30">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Exercitationem odio amet eos dolore suscipit placeat.
+              </p>
+              <button class="btn btn-lg btn-rounded btn-outline-warning">
+                Learn More
+              </button>
+            </div>
+            <div class="col-md-4 p-4 text-left">
+              <p
+                class="text-primary text--cap border-bottom-primary d-inline-block"
+              >
+                Features
+              </p>
+              <div class="menu-icon-grid w-auto p-0">
+                <a href="#"> <i class="i-Shop-4"></i> Home </a>
+                <a href="#"> <i class="i-Library"></i> UI Kits </a>
+                <a href="#"> <i class="i-Drop"></i> Apps </a>
+                <a href="#">
+                  <i class="i-File-Clipboard-File--Text"></i> Forms
+                </a>
+                <a href="#"> <i class="i-Checked-User"></i> Sessions </a>
+                <a href="#"> <i class="i-Ambulance"></i> Support </a>
+              </div>
+            </div>
+            <div class="col-md-4 p-4 text-left">
+              <p
+                class="text-primary text--cap border-bottom-primary d-inline-block"
+              >
+                Components
+              </p>
+              <ul class="links">
+                <li>
+                  <a href="accordion.html">Accordion</a>
+                </li>
+                <li>
+                  <a href="alerts.html">Alerts</a>
+                </li>
+                <li>
+                  <a href="buttons.html">Buttons</a>
+                </li>
+                <li>
+                  <a href="badges.html">Badges</a>
+                </li>
+                <li>
+                  <a href="carousel.html">Carousels</a>
+                </li>
+                <li>
+                  <a href="lists.html">Lists</a>
+                </li>
+                <li>
+                  <a href="popover.html">Popover</a>
+                </li>
+                <li>
+                  <a href="tables.html">Tables</a>
+                </li>
+                <li>
+                  <a href="datatables.html">Datatables</a>
+                </li>
+                <li>
+                  <a href="modals.html">Modals</a>
+                </li>
+                <li>
+                  <a href="nouislider.html">Sliders</a>
+                </li>
+                <li>
+                  <a href="tabs.html">Tabs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Mega menu -->
+      <div class="search-bar" @click="toggleSearch">
+        <input type="text" placeholder="Search" />
+        <i class="search-icon text-muted i-Magnifi-Glass1"></i>
+      </div>
+    </div>
+
+    <div style="margin: auto"></div>
+
+    <div class="header-part-right">
+
+      <div class="dropdown">
+        <b-dropdown
+          id="dropdown"
+          text="Dropdown Button"
+          class="m-md-2"
+          toggle-class="text-decoration-none"
+          no-caret
+          variant="link"
+        >
+          <template slot="button-content">
+            <i
+              class="i-Safe-Box text-muted header-icon"
+              role="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></i>
+          </template>
+          <div class="menu-icon-grid">
+            <a href="#"> <i class="i-Shop-4"></i> Home </a>
+            <a href="#"> <i class="i-Library"></i> UI Kits </a>
+            <a href="#"> <i class="i-Drop"></i> Apps </a>
+            <a href="#"> <i class="i-File-Clipboard-File--Text"></i> Forms </a>
+            <a href="#"> <i class="i-Checked-User"></i> Sessions </a>
+            <a href="#"> <i class="i-Ambulance"></i> Support </a>
+          </div>
+        </b-dropdown>
+      </div>
+      <!-- Notificaiton -->
+      <div class="dropdown">
+        <b-dropdown
+          id="dropdown-1"
+          text="Dropdown Button"
+          class="m-md-2 badge-top-container"
+          toggle-class="text-decoration-none"
+          no-caret
+          variant="link"
+        >
+          <template slot="button-content">
+            <span class="badge badge-primary">3</span>
+            <i class="i-Bell text-muted header-icon"></i>
+          </template>
+          <!-- Notification dropdown -->
+          <vue-perfect-scrollbar
+            :settings="{ suppressScrollX: true, wheelPropagation: false }"
+            ref="myData"
+            class="dropdown-menu-right rtl-ps-none notification-dropdown  ps scroll"
+          >
+            <!-- <div class="dropdown-menu-right rtl-ps-none notification-dropdown"> -->
+            <div class="dropdown-item d-flex">
+              <div class="notification-icon">
+                <i class="i-Speach-Bubble-6 text-primary mr-1"></i>
+              </div>
+              <div class="notification-details flex-grow-1">
+                <p class="m-0 d-flex align-items-center">
+                  <span>New message</span>
+                  <!-- <span class="badge badge-pill badge-primary ml-1 mr-1">new</span> -->
+                  <span class="flex-grow-1"></span>
+                  <span class="text-small text-muted ml-auto">10 sec ago</span>
+                </p>
+                <p class="text-small text-muted m-0">
+                  James: Hey! are you busy?
+                </p>
+              </div>
+            </div>
+            <div class="dropdown-item d-flex">
+              <div class="notification-icon">
+                <i class="i-Receipt-3 text-success mr-1"></i>
+              </div>
+              <div class="notification-details flex-grow-1">
+                <p class="m-0 d-flex align-items-center">
+                  <span>New order received</span>
+                  <!-- <span class="badge badge-pill badge-success ml-1 mr-1">new</span> -->
+                  <span class="flex-grow-1"></span>
+                  <span class="text-small text-muted ml-auto">2 hours ago</span>
+                </p>
+                <p class="text-small text-muted m-0">1 Headphone, 3 iPhone x</p>
+              </div>
+            </div>
+            <div class="dropdown-item d-flex">
+              <div class="notification-icon">
+                <i class="i-Empty-Box text-danger mr-1"></i>
+              </div>
+              <div class="notification-details flex-grow-1">
+                <p class="m-0 d-flex align-items-center">
+                  <span>Product out of stock</span>
+                  <!-- <span class="badge badge-pill badge-danger ml-1 mr-1">3</span> -->
+                  <span class="flex-grow-1"></span>
+                  <span class="text-small text-muted ml-auto"
+                    >10 hours ago</span
+                  >
+                </p>
+                <p class="text-small text-muted m-0">
+                  Headphone E67, R98, XL90, Q77
+                </p>
+              </div>
+            </div>
+            <div class="dropdown-item d-flex">
+              <div class="notification-icon">
+                <i class="i-Data-Power text-success mr-1"></i>
+              </div>
+              <div class="notification-details flex-grow-1">
+                <p class="m-0 d-flex align-items-center">
+                  <span>Server Up!</span>
+                  <!-- <span class="badge badge-pill badge-success ml-1 mr-1">3</span> -->
+                  <span class="flex-grow-1"></span>
+                  <span class="text-small text-muted ml-auto"
+                    >14 hours ago</span
+                  >
+                </p>
+                <p class="text-small text-muted m-0">
+                  Server rebooted successfully
+                </p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </vue-perfect-scrollbar>
+        </b-dropdown>
+      </div>
+      <!-- Notificaiton End -->
+
+      <!-- User avatar dropdown -->
+      <div class="dropdown">
+        <b-dropdown
+          id="dropdown-1"
+          text="Dropdown Button"
+          class="m-md-2 user col align-self-end"
+          toggle-class="text-decoration-none"
+          no-caret
+          variant="link"
+        >
+          <template slot="button-content">
+            <img
+              src="@/assets/images/faces/1.jpg"
+              id="userDropdown"
+              alt
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            />
+          </template>
+
+          <div class="dropdown-menu-right" aria-labelledby="userDropdown">
+            <div class="dropdown-header">
+              <i class="i-Lock-User mr-1"></i> Timothy Carlson
+            </div>
+            <a class="dropdown-item">Account settings</a>
+            <a class="dropdown-item">Billing history</a>
+            <a class="dropdown-item" href="signin.html">Sign out</a>
+          </div>
+        </b-dropdown>
+      </div>
+    </div>
+    <search-component
+      :isSearchOpen.sync="isSearchOpen"
+      @closeSearch="toggleSearch"
+    ></search-component>
+  </div>
+
+  <!-- header top menu end -->
+</template>
+<script>
+import searchComponent from "../common/search";
+import { isMobile } from "mobile-device-detect";
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  components: {
+    searchComponent
+  },
+
+  data() {
+    return {
+      isDisplay: true,
+
+      isStyle: true,
+      isSearchOpen: false,
+      isMouseOnMegaMenu: true,
+      isMegaMenuOpen: false
+    };
+  },
+  mounted() {
+    // document.addEventListener("click", this.closeMegaMenu);
+  },
+  computed: {
+    ...mapGetters(["getCompactSideBarToggleProperties"])
+  },
+
+  methods: {
+    ...mapActions(["changeCompactSidebarProperties", "changeThemeMode"]),
+
+    closeMegaMenu() {
+      // console.log(this.isMouseOnMegaMenu);
+      if (!this.isMouseOnMegaMenu) {
+        this.isMegaMenuOpen = !this.isMegaMenuOpen;
+      }
+    },
+    toggleMegaMenu() {
+      this.isMegaMenuOpen = !this.isMegaMenuOpen;
+    },
+    toggleSearch() {
+      this.isSearchOpen = !this.isSearchOpen;
+    },
+
+    compactSideBarToggle(el) {
+      console.log("test");
+      if (this.getCompactSideBarToggleProperties.isSideNavOpen && isMobile) {
+        this.changeCompactSidebarProperties();
+        console.log("1");
+      } else if (this.getCompactSideBarToggleProperties.isSideNavOpen) {
+        this.changeCompactSidebarProperties();
+        console.log("2");
+      } else if (
+        !this.getCompactSideBarToggleProperties.isSideNavOpen &&
+        !this.getCompactSideBarToggleProperties.isActiveSecondarySideNav
+      ) {
+        this.changeCompactSidebarProperties();
+        console.log("3");
+      } else if (!this.getCompactSideBarToggleProperties.isSideNavOpen) {
+        // console.log("4");
+
+        this.changeCompactSidebarProperties();
+
+        console.log("4");
+      }
+    }
+  }
+};
+</script>
+
+
+
+
+          '>
+            </code>
+          <h2 class="doc-section-title" id="install">
+            SideNav
+            <a href="#install" class="section-link"></a>
+
+          </h2>
+
+          <p>
+            <code>source\src\containers\layouts\compactSidebar\compactSidebar.vue</code>
+          </p>
+          <p><code>``</code> need to replace with <code>''</code> such as <code>`dashboards`</code> With
+            <code>'dashboards'</code> </p>
+
+          <div class="copy-code">
+            <button class="btn btn-sm btn-primary btn-clipboard" data-toggle="tooltip" data-placement="top"
+              title="Copy to clipboard">
+              Copy
+            </button>
+          </div>
+          <code class="code" data-code='
+<template>
+  <div
+    class="side-content-wrap"
+    @mouseenter="isMenuOver = true"
+    @mouseleave="isMenuOver = false"
+    @touchstart="isMenuOver = true"
+  >
+    <vue-perfect-scrollbar
+      :settings="{ suppressScrollX: true, wheelPropagation: false }"
+      :class="{ open: getCompactSideBarToggleProperties.isSideNavOpen }"
+      ref="myData"
+      class="sidebar-left rtl-ps-none ps "
+    >
+      <ul class="navigation-left">
+        <div class="logo">
+          <img alt="" src="@/assets/images/logo.png" />
+        </div>
+        <li
+          @mouseenter="toggleSubMenu"
+          :class="{ active: selectedParentMenu == `dashboards` }"
+          class="nav-item"
+          data-item="dashboards"
+        >
+          <a class="nav-item-hold" href="#">
+            <i class="nav-icon i-Bar-Chart"></i>
+            <span class="nav-text">Dashboards</span>
+          </a>
+
+          <div class="triangle"></div>
+        </li>
+       
+      </ul>
+    </vue-perfect-scrollbar>
+
+    <vue-perfect-scrollbar
+      :class="{ open: getCompactSideBarToggleProperties.isSideNavOpen }"
+      :settings="{ suppressScrollX: true, wheelPropagation: false }"
+      class="sidebar-left-secondary ps rtl-ps-none"
+    >
+      <div ref="sidebarChild">
+        <header>
+          <div class="logo">
+            <img src="@/assets/images/logo-text.png" alt />
+          </div>
+        </header>
+
+        <!-- submenu-dashboards -->
+        <div
+          class="submenu-area"
+          data-parent="dashboards"
+          :class="{ `d-block`: selectedParentMenu == `dashboards` }"
+        >
+          <header>
+            <h6>Dashboards</h6>
+            <p>Lorem ipsum dolor sit.</p>
+          </header>
+          <ul class="childNav" data-parent="dashboards">
+            <li class="nav-item">
+              <router-link tag="a" class to="/app/dashboards/dashboard.v1">
+                <i class="nav-icon i-Clock-3"></i>
+                <span class="item-name">Version 1</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link tag="a" class to="/app/dashboards/dashboard.v2">
+                <i class="nav-icon i-Clock-4"></i>
+                <span class="item-name">Version 2</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link tag="a" class to="/app/dashboards/dashboard.v3">
+                <i class="nav-icon i-Over-Time"></i>
+                <span class="item-name">Version 3</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link tag="a" class to="/app/dashboards/dashboard.v4">
+                <i class="nav-icon i-Clock"></i>
+                <span class="item-name">Version 4</span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <!-- end dashboards -->
+      
+
+      
+
+      </div>
+    </vue-perfect-scrollbar>
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from "vuex";
+import { isMobile } from "mobile-device-detect";
+export default {
+  data() {
+    return {
+      isMenuOver: false,
+
+      selectedParentMenu: "",
+      isMobile
+    };
+  },
+  mounted() {
+    this.toggleSelectedParentMenu();
+  
+    document.addEventListener("click", this.returnSelectedParentMenu);
+  
+  },
+  computed: {
+    ...mapGetters(["getCompactSideBarToggleProperties"])
+  },
+
+  methods: {
+    toggleSelectedParentMenu() {
+      const currentParentUrl = this.$route.path
+        .split("/")
+        .filter(x => x !== "")[1];
+
+      if (currentParentUrl !== undefined || currentParentUrl !== null) {
+        this.selectedParentMenu = currentParentUrl.toLowerCase();
+      } else {
+        this.selectedParentMenu = "dashboards";
+      }
+    },
+    toggleSubMenu(e) {
+      let childrens = this.$refs.sidebarChild.children;
+      let parent = e.target.dataset.item;
+
+      this.selectedParentMenu = parent;
+    },
+    returnSelectedParentMenu() {
+      if (!this.isMenuOver) {
+        this.toggleSelectedParentMenu();
+      }
+    },
+
+    toggleSidebarDropdwon(event) {
+      let dropdownMenus = this.$el.querySelectorAll(".dropdown-sidemenu.open");
+
+      event.currentTarget.classList.toggle("open");
+
+      dropdownMenus.forEach(dropdown => {
+        dropdown.classList.remove("open");
+      });
+    }
+  }
+};
+</script>
+'>
+              </code>
+
+        </div>
+
+        <div class="doc-content__secondary-sidebar">
+          <ul>
+            <li><a href="#select">Large Sidebar</a>
+              <ul>
+                <li><a href="#single">Index</a></li>
+                <li><a href="#multiple">Topbar</a></li>
+                <li><a href="#install">SideNav</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="assets/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+
+    <script src="assets/vendor/clipboard.min.js"></script>
+
+    <script src="assets/js/es5/doc.js"></script>
+    <script src="assets/js/es5/header.min.js"></script>
+    <script src="assets/js/es5/sidebar.min.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,1214 @@
+@import url(./icon/iconfont.css);
+
+/******** 公共 ********/
+
+.fzGB1-0 {
+    font-family: FZLTHJW--GB1-0 !important;
+}
+
+.fzFZXIYSJ {
+    font-family: FZXIYSJ !important;
+}
+
+.icon-xihuanActive {
+    color: #C4A57F;
+}
+
+i {
+    vertical-align: middle;
+}
+
+.icon-badge {
+    background: #C4A57F !important;
+    position: relative;
+    top: -30px;
+    float: right;
+}
+
+.mint-badge.icon-badge.is-primary {
+    background: #C4A57F;
+}
+
+body {
+    /* IOS禁止微信调整字体大小 */
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+}
+
+html,
+body,
+p,
+ul,
+li,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+p {
+    word-break: break-all;
+}
+
+h3 {
+    font-family: 'FZLTHJ';
+    /* FZXIYSJ */
+}
+
+p,
+span,
+li,
+a {
+    font-family: 'FZLTHJ';
+}
+
+.icon-Home,
+.icon-Haveclass,
+.icon-store,
+.icon-my {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 4px;
+    /* color: #585757; */
+}
+
+.mint-tab-item {
+    color: #585757;
+}
+
+.mint-tabbar>.mint-tab-item.is-selected {
+    /* background: transparent;
+    color: #097276; */
+}
+
+.mint-tabbar.is-fixed {
+    box-shadow: 0px 0px 8px 0px rgba(231, 231, 231, 0.72);
+}
+
+
+/* .mint-tab-item.is-selected>.icon-Home,
+.mint-tab-item.is-selected>.icon-Haveclass,
+.mint-tab-item.is-selected>.icon-store,
+.mint-tab-item.is-selected>.icon-my{
+    color:  #097276;
+} */
+
+
+/*首页*/
+
+.is-selected .icon-Home::before {
+    content: "\e706";
+    /* content: url(../mobile_img/shouye.png); */
+    /* background-image: url(../mobile_img/shouye.png); */
+    /* width: 1.375rem; */
+}
+
+
+/*上课*/
+
+.is-selected .icon-Haveclass::before {
+    content: "\e70c";
+}
+
+
+/*商店*/
+
+.is-selected .icon-store::before {
+    content: "\e70b";
+}
+
+
+/*我的*/
+
+.is-selected .icon-my::before {
+    content: "\e708";
+}
+
+
+/*直播*/
+
+.live {
+    background: #C4A57F;
+}
+
+
+/*录播*/
+
+.recorded {
+    background: #EA9C91;
+}
+
+
+/**公共-lib/style.css 覆盖 **/
+
+.mint-cell-wrapper {
+    background-size: 0;
+}
+
+
+/******************* margin *******************/
+
+.m-auto {
+    margin: 0px auto;
+}
+
+
+/*left*/
+
+.ml-10 {
+    margin-left: .625rem;
+}
+
+.ml-15 {
+    margin-left: .9375rem;
+}
+
+.ml-20 {
+    margin-left: 1.25rem;
+}
+
+.ml-30 {
+    margin-left: 1.875rem;
+}
+
+.ml-35 {
+    margin-left: 2.1875rem;
+}
+
+.ml-110 {
+    margin-left: 6.875rem;
+}
+
+
+/*right*/
+
+.mr-5 {
+    margin-right: .3125rem;
+}
+
+.mr-10 {
+    margin-right: .625rem;
+}
+
+.mr-10 {
+    margin-right: .625rem;
+}
+
+.mr-15 {
+    margin-right: .9375rem;
+}
+
+.mr-20 {
+    margin-right: 1.25rem;
+}
+
+.mr-30 {
+    margin-right: 1.875rem;
+}
+
+.mr-60 {
+    margin-right: 3.75rem;
+}
+
+
+/**top**/
+
+.mt-5 {
+    margin-top: .3125rem;
+}
+
+.mt-10 {
+    margin-top: .625rem !important;
+}
+
+.mt-15 {
+    margin-top: .9375rem;
+}
+
+.mt-14 {
+    margin-top: .875rem;
+}
+
+.mt-20 {
+    margin-top: 1.25rem;
+}
+
+.mt-24 {
+    margin-top: 1.5rem;
+}
+
+.mt-30 {
+    margin-top: 1.875rem;
+}
+
+.mt-35 {
+    margin-top: 2.1875rem;
+}
+
+.mt-40 {
+    margin-top: 2.5rem !important;
+}
+
+.mt-60 {
+    margin-top: 3.75rem !important;
+}
+
+.mt-90 {
+    margin-top: 5.625rem;
+}
+
+
+/**bottom**/
+
+.mb-0 {
+    margin-bottom: 0rem;
+}
+
+.mb-10 {
+    margin-bottom: .625rem;
+}
+
+.mb-15 {
+    margin-bottom: .9375rem;
+}
+
+.mb-20 {
+    margin-bottom: 1.25rem;
+}
+
+.mb-25 {
+    margin-bottom: 1.5rem
+}
+
+.mb-30 {
+    margin-bottom: 1.875rem;
+}
+
+.mb-40 {
+    margin-bottom: 2.5rem;
+}
+
+.mb-65 {
+    margin-bottom: 4.0625rem;
+}
+
+.mb-100 {
+    margin-bottom: 6.25rem;
+}
+
+
+/********************* padding ***********************/
+
+.pad-0 {
+    padding: 0px !important;
+}
+
+.pl-8 {
+    padding-left: .5rem;
+}
+
+
+/*left*/
+
+.pl-10 {
+    padding-left: .625rem !important;
+}
+
+.pl-12 {
+    padding-left: .75rem;
+}
+
+.pl-15 {
+    padding-left: .9375rem;
+}
+
+.pl-20 {
+    padding-left: 1.25rem;
+}
+
+.pl-25 {
+    padding-left: 1.5625rem;
+}
+
+.pl-27 {
+    padding-left: 1.6875rem;
+}
+
+.pl-28 {
+    padding-left: 1.75rem;
+}
+
+.pl-30 {
+    padding-left: 1.875rem;
+}
+
+.pl-35 {
+    padding-left: 2.1875rem;
+}
+
+.pl-40 {
+    padding-left: 2.5rem;
+}
+
+.pl-110 {
+    padding-left: 6.875rem;
+}
+
+
+/*right*/
+
+.pr-10 {
+    padding-right: .625rem;
+}
+
+.pr-12 {
+    padding-right: .75rem;
+}
+
+.pr-15 {
+    padding-right: .9375rem;
+}
+
+.pr-20 {
+    padding-right: 1.25rem;
+}
+
+.pr-25 {
+    padding-right: 1.5625rem;
+}
+
+.pr-27 {
+    padding-right: 1.6875rem;
+}
+
+.pr-28 {
+    padding-right: 1.75rem;
+}
+
+.pr-30 {
+    padding-right: 1.875rem;
+}
+
+.pr-40 {
+    padding-right: 2.5rem;
+}
+
+
+/**top**/
+
+.pt-0 {
+    padding-top: 0rem !important;
+}
+
+.pt-10 {
+    padding-top: .625rem;
+}
+
+.pt-15 {
+    padding-top: .9375rem;
+}
+
+.pt-20 {
+    padding-top: 1.25rem;
+}
+
+.pt-24 {
+    padding-top: 1.5rem;
+}
+
+.pt-30 {
+    padding-top: 1.875rem;
+}
+
+.pt-40 {
+    padding-top: 2.5rem;
+}
+
+
+/**bottom**/
+
+.pb-0 {
+    padding-bottom: 0rem !important;
+}
+
+.pb-10 {
+    padding-bottom: .625rem;
+}
+
+.pb-15 {
+    padding-bottom: .9375rem;
+}
+
+.pb-20 {
+    padding-bottom: 1.25rem;
+}
+
+.pb-30 {
+    padding-bottom: 1.875rem;
+}
+
+.pb-60 {
+    padding-bottom: 3.75rem;
+}
+
+.pb-100 {
+    padding-bottom: 6.25rem;
+}
+
+
+/*暂时没有哦~*/
+
+.null-text {
+    width: 100%;
+    height: 4.0625rem;
+    line-height: 4rem;
+    font-size: 16px;
+    color: #999;
+}
+
+
+/**其他**/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.dis_inline {
+    display: inline !important;
+}
+
+.dis_block {
+    display: block !important;
+}
+
+.dis_in_block {
+    display: inline-block;
+}
+
+.dis_flow_root {
+    display: flow-root;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.pos_r {
+    position: relative;
+}
+
+.pos_a {
+    position: absolute;
+}
+
+.radius4 {
+    border-radius: .25rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*** font-size ****/
+
+.fz12 {
+    font-size: .75rem;
+}
+
+.fz13 {
+    font-size: .8125rem;
+}
+
+.fz14 {
+    font-size: .875rem;
+}
+
+.fz15 {
+    font-size: .9375rem;
+}
+
+.fz15I {
+    font-size: .833rem!important;
+}
+
+.fz16 {
+    font-size: 1rem !important;
+}
+
+.fz17 {
+    font-size: 1.0625rem;
+}
+
+.fz18 {
+    font-size: 1.125rem !important;
+}
+
+.fz20 {
+    font-size: 1.25rem;
+}
+
+.fz22 {
+    font-size: 1.375rem;
+}
+
+.fz24 {
+    font-size: 1.5rem;
+}
+
+.fz32 {
+    font-size: 2rem;
+}
+
+.fz34 {
+    font-size: 2.125rem;
+}
+
+
+/*Color*/
+
+.bg3f {
+    background: #fff;
+}
+
+.bg_transparent {
+    background: transparent;
+}
+
+
+/*主色-灰色*/
+
+.bgfaf9 {
+    background: #FAF9F8;
+}
+
+.bgf1 {
+    background: #F1EEEB;
+}
+
+.bgfb {
+    background: #FBF8F5;
+}
+
+.cf {
+    color: #fff !important;
+}
+
+.c3 {
+    color: #333 !important;
+}
+
+.c3d {
+    color: #ddd !important;
+}
+
+.c5 {
+    color: #555;
+}
+
+.c6 {
+    color: #666;
+}
+
+.c8 {
+    color: #888;
+}
+
+.c89 {
+    color: #898989;
+}
+
+.c7271 {
+    color: #727171;
+}
+
+.c4c49 {
+    color: #4C4948;
+}
+
+.c5957 {
+    color: #595757;
+}
+
+.c9 {
+    color: #999 !important;
+}
+
+.c030 {
+    color: #030000;
+}
+
+.c30 {
+    color: #333;
+}
+
+.c077 {
+    color: #07767A;
+}
+
+.c087 {
+    color: #087276
+}
+
+.c097 {
+    color: #097276
+}
+
+.ccf7 {
+    color: #cf7065
+}
+
+.c000 {
+    color: #000000
+}
+
+.c008 {
+    color: #008aba;
+}
+
+.cbb5 {
+    color: #bb5b83;
+}
+
+.cff3b {
+    color: #FF3B3B;
+}
+
+.c648 {
+    color: #648ea2;
+}
+
+.c969 {
+    color: #969a70;
+}
+
+.cb69 {
+    color: #b69271;
+}
+
+.cb19 {
+    color: #B19575;
+}
+
+.cad4 {
+    color: #ad4e3f;
+}
+
+.cca3 {
+    color: #CA341C;
+}
+
+.cff4 {
+    color: #FF4D4D;
+}
+
+
+/** 课堂-列表 **/
+
+.c998 {
+    color: #998675;
+}
+
+.c4a5 {
+    color: #C4A57F !important;
+}
+
+
+/**/
+
+
+/** 个人中心 **/
+
+.cb49 {
+    color: #B49876
+}
+
+
+/*** Btn ***/
+
+
+/* //默认主题色 */
+
+.mint-button--primary {
+    background-color: #C4A57F;
+}
+
+
+/* btn-默认-no */
+
+.mint-button--default {
+    border: 0px;
+    box-shadow: none;
+    font-size: .9375rem;
+    color: #999;
+    background: transparent;
+}
+
+
+/* .mint-button--default:active{
+
+} */
+
+.mint-button::after {
+    background: transparent;
+}
+
+
+/* 支付btn */
+
+.btn_pay {
+    min-width: 5.625rem;
+    height: 2.0625rem;
+    background: rgba(9, 114, 118, 1);
+    border-radius: .125rem;
+    color: #fff;
+}
+
+
+/* 取消订单- 申请退课 - 取消退课申请 */
+
+.btn_drop {
+    min-width: 5.625rem;
+    height: 2.0625rem;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(196, 165, 127, 1);
+    color: #C4A57F;
+    border-radius: .125rem;
+}
+
+
+/* 申请发票-申请中 */
+
+.btn_apply {
+    min-width: 5.625rem;
+    height: 2.0625rem;
+    color: #fff;
+    background: rgba(196, 165, 127, 1);
+    border-radius: .125rem;
+}
+
+
+/* 待开发票 - 已开发票 */
+
+.btn_gray {
+    min-width: 5.625rem;
+    height: 2.0625rem;
+    color: #fff;
+    background: rgba(234, 234, 234, 1);
+    border-radius: .125rem;
+}
+
+
+/* 删除按钮 */
+
+.btn_del {
+    min-width: 5.625rem;
+    height: 2.0625rem;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: .125rem;
+}
+
+
+/* 固定底部 + 写评价 */
+
+.WritingEvaluation_footFixed {
+    height: 3.0625rem;
+    line-height: 3.0625rem;
+    background: rgba(196, 165, 127, 1);
+    box-shadow: 0px 0px 8px 0px rgba(231, 231, 231, 0.72);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 20;
+}
+
+
+/* 固定底部 + footer */
+
+.Define_footFixed {
+    /* height: 3.0625rem; */
+    line-height: 3.0625rem;
+    /* background:rgba(196,165,127,1); */
+    background: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(231, 231, 231, 0.72);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Define_footFixed .Evaluation-content {
+    width: 15rem;
+}
+
+.Define_footFixed button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+/** 最新-最热 **/
+
+
+/* .BaskHomework_btn{
+
+} */
+
+.BaskHomework_btn button {
+    min-width: 60px;
+    height: 30px;
+    background: rgba(196, 165, 127, 1);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'FZLTHJ';
+    font-weight: normal;
+    margin-right: .9375rem;
+}
+
+
+/*任务树*/
+
+
+/*过期*/
+
+.overdue {
+    padding: .1875rem .3125rem .1875rem .375rem;
+    border-radius: 3px;
+    background: #DDDDDD;
+    display: inline-block;
+    text-align: center;
+    vertical-align: super;
+}
+
+
+/*倒计时*/
+
+.countdown {
+    padding: .1875rem .3125rem .1875rem .375rem;
+    border-radius: 3px;
+    background: #EA9C91;
+    max-width: 4.375rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: super;
+}
+
+
+/*正在直播*/
+
+.Is_live {
+    padding: .1875rem .3125rem .1875rem .375rem;
+    border-radius: 3px;
+    background: #26C267;
+    display: inline-block;
+    text-align: center;
+    vertical-align: super;
+}
+
+
+/** 灰色的评论区-border **/
+
+.commentsBorderLeijc {
+    position: relative;
+}
+
+.commentsBorderLeijc::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    background: #F5F5F5;
+    top: 0;
+    left: 0;
+}
+
+
+/* 评论区对话-回复 */
+
+.dialogue {
+    padding: .875rem .6875rem .6875rem;
+    background: rgba(196, 165, 127, 0.05);
+    border-radius: 2px;
+    margin-bottom: .9375rem;
+}
+
+
+/** 回复的评论区 **/
+
+.Reply_dialogue {
+    margin: 0px -30px;
+    padding: 1.25rem 1.5625rem 1.25rem 2.1875rem;
+    background: rgba(196, 165, 127, 0.05);
+}
+
+.Reply_dialogue ul li {
+    /* padding-bottom: 1.375rem; */
+    margin-bottom: 1.25rem;
+    display: flow-root;
+}
+
+.Reply_dialogue ul li:last-child {
+    border-bottom: 0rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+}
+
+.Reply_dialogue ul li>img {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: .625rem;
+}
+
+.Reply_dialogue ul li>img+div {
+    float: left;
+    width: 84%;
+}
+
+.Reply_dialogue ul li>img+div>p {
+    margin-bottom: .6875rem;
+}
+
+.Reply_dialogue ul li>img+div>p:last-child {
+    margin-bottom: 0rem;
+}
+
+
+/*******************************  学习回顾  *************************/
+
+.review-content>h3+ul>li:nth-child(1) {
+    /* padding-left: 1rem; */
+    color: #077478;
+    font-size: .6rem;
+    margin-bottom: 1.0625rem;
+}
+
+.review-content>h3+ul>li:nth-child(2) {
+    font-size: .80rem;
+    text-align: right;
+    color: #c4a57f;
+    /* padding-right: .6875rem; */
+    margin-bottom: 1.0625rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review-content>h3+ul>li:nth-child(4) {
+    margin-top: 1.0625rem;
+    font-size: .75rem;
+    color: #7a9e7c;
+}
+
+.review-content>h3+ul>li:nth-child(3) {
+    color: rgba(196, 165, 127, .7);
+    font-size: 1.2rem;
+    display: inline-block;
+    /* margin-top: 1.0625rem; */
+    padding-left: .9375rem;
+}
+
+.review-content>h3+ul>li:nth-child(5) {
+    color: #c4a57f;
+    font-size: .8rem;
+    text-align: right;
+    padding-right: 2.1875rem;
+    /* margin-top: .9375rem; */
+    margin-bottom: .725rem;
+}
+
+.review-content>h3+ul>li:nth-child(6) {
+    color: #077478;
+    font-size: .75rem;
+    /* padding-left: 2.4375rem; */
+    text-align: left;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.review-content>h3+ul>li:nth-child(7) {
+    color: #7A9E7C;
+    font-size: .75rem;
+    padding-left: .625rem;
+    display: inline-block;
+}
+
+.review-content>h3+ul>li:nth-child(8) {
+    color: #C4A57F;
+    font-size: .9375rem;
+    padding-left: 2.3125rem;
+    display: inline-block;
+}
+
+.review-content>h3+ul>li:nth-child(9) {
+    color: #C4A57F;
+    font-size: .9375rem;
+    padding-left: 3.0625rem;
+    display: inline-block;
+    margin-top: 1.0625rem;
+    margin-bottom: 1.25rem;
+}
+
+.review-content>h3+ul>li:nth-child(10) {
+    color: #C4A57F;
+    font-size: .9375rem;
+    padding-left: 3.0625rem;
+    display: inline-block;
+    margin-top: 1.0625rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/*** 我们一起回忆下你进步过程吧  ****/
+
+.review-time {
+    margin-top: 2rem;
+    padding: 2.1875rem 1.5rem 3rem 1.8rem;
+    background: rgba(196, 165, 127, 0.1);
+    border-radius: 5px 5px 7px 7px;
+}
+
+.review-time ul {
+    margin-top: 1.4375rem;
+    position: relative;
+}
+
+.review-time ul::before {
+    top: -10px;
+    position: absolute;
+    content: '';
+    display: inline-block;
+    left: 0px;
+    height: 100%;
+    width: 1px;
+    opacity: 0.4;
+    background: -webkit-linear-gradient(#EAEAEA, #C4A57F, #EAEAEA);
+    background: -o-linear-gradient(#EAEAEA, #C4A57F, #EAEAEA);
+    background: -moz-linear-gradient(#EAEAEA, #C4A57F, #EAEAEA);
+    background: linear-gradient(#EAEAEA, #C4A57F, #EAEAEA);
+}
+
+.review-time ul li {
+    margin-left: 17px;
+    padding-bottom: 28px;
+    font-size: 12px;
+    color: #000;
+    position: relative;
+    line-height: 1.3rem;
+}
+
+.review-time ul li::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: #C4A57F;
+    opacity: 0.5;
+    left: -22px;
+    top: 7px;
+}
+
+.My_ChairList-evaluation img {
+    width: auto;
+    max-width: 100%;
+}
+
+.w-e-icon-happy:before {
+    font-size: 25px;
+    color: #999;
+}
+
+.w-e-text {
+    padding: 0;
+    color: #333;
+}
+
+.w-e-text-container {
+    border: none !important;
+}
+
+.w-e-text-container .w-e-panel-container {
+    z-index: 9;
+    top: auto;
+}
+
+
+/* 字体粗细 */
+
+.fw0 {
+    font-weight: normal;
+}
+
+.fw3 {
+    font-weight: 300;
+}
+
+.fw6 {
+    font-weight: 600;
+}
+
+.fw9 {
+    font-weight: 900;
+}
+
+.viewer-button::before {
+    bottom: 13px!important;
+    left: 14px!important;
+}

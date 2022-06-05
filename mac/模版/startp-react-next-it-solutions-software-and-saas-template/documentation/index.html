@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>StartP - React Next IT Startups and Digital Services Template</title>
+
+        <!-- Styles -->
+        <link href="css/collection.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+
+        <!-- Scripts -->
+        <script src="js/other.js"></script>
+        <script src="js/custom.js"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+        <!-- Sidebar -->
+        <aside class="sidebar sidebar-boxed sidebar-dark">  
+            <ul class="nav sidenav dropable">
+                <li><a href="#introduction" title="Introduction">Introduction</a></li>
+                <li><a href="#getting_started" title="Setup Development Envrionment">Setup Development Environment</a></li>
+                 <li><a href="#documenter_cover">Pages and Components Info</a></li>
+                
+                <li><a href="#dependencies" title="Dependencies">Dependencies</a></li>
+                <li><a href="#change_layout" title="Change Default Home Page">Change Default Home Page</a></li>
+                <li><a href="#fonts_used" title="Fonts">Fonts</a></li>
+                <li><a href="#credits" title="Credits">Credits</a></li>
+                <li><a href="#supports" title="Support">Support</a></li>
+            </ul>
+        </aside>
+        <!-- END Sidebar -->
+
+        <header class="site-header navbar-transparent"> 
+            <!-- Banner -->
+            <div class="banner auto-size" style="background-color: #455aa2">
+                <div class="container-fluid">
+                    <h1><strong>StartP - React Next</strong>  Documentation</h1>
+                </div>
+            </div>
+            <!-- END Banner --> 
+        </header>
+        
+        <main class="container-fluid"> 
+
+            <!-- Main content -->
+            <article class="main-content" role="main">
+                <section id="introduction">
+                    <div class="page-header">
+                        <h3>Introduction</h3>
+                    </div>
+                    <p>StartP is a React Next and Bootstrap 4 based Professional website template. This has been built with React, ES6+ and as framework Next.js and Express.js. This is created especially for individuals and agencies who provide IT Solutions and Software Services through online. The template contains multiple unique design variations in the home and other pages for the website. Mobile First Design of the template looks beautiful stunning on all types of screens and devices. Individuals or Agencies who are providing Web, Mobile, eCommerce, AI, Machine Learning or Digital Marketing focused services could love the StartP template for their existing or next business website!</p>
+                </section>
+
+                <section id="getting_started">
+                    <div class="page-header">
+                        <h3>Setup Development Environment</h3>
+                    </div>
+                    <p>
+                        In order to kickstart the development of your web app with StartP, the very first thing you need to do is to setup a react development environment.
+                    </p>
+                    <p>Following tools are needed to setup a react dev environment:</p>
+                    <ul>
+                        <li><b>Node JS</b></li>
+                        <p>
+                            NodeJS works as a node package manager behind the scene. It is recommended to download and install the latest version of Node JS from its official site <a href="http://nodejs.org/" target="_blank">http://nodejs.org/</a>
+                        </p>
+                    </ul>
+                    
+                    <div class="page-header">
+                        <h3>Preparation</h3>
+                    </div>
+
+                    <p>
+                        You'll need to install <a href="https://nodejs.org/en/" href="_blank">Node.js >=v8.11+ (Recommended Version)</a> (NPM comes along with it) and serve (a NPM package)
+                    </p>
+
+                    <p>Use command line tool i.e. powershell or terminal and navigate to the project(StartP) root. This is powershell in windows and terminal on mac/linux.</p>
+
+                    <strong>Let's see how the setup works:</strong> <br>
+                    <p>Use terminal and navigate to the project root.</p>
+                    <p>Then run : <code class="language-markup">npm install</code></p>
+                    <p>Then run : <code class="language-markup">npm run dev</code></p>
+                    <p>It'll return something like this in console:</p>
+                    <p>> start-p@1.0.0 dev drive:\start-p</p>
+                    <p>> node server.js</p>
+                    <p>Now in the browser go <a href="localhost:3000">localhost:3000</a></p>
+					
+					<div class="page-header">
+                        <h3>Note:</h3>
+						<p>The ThemeForest project based on green color default if you want to change color then please see the _app.js file from the pages directory & follow the comment from that.</p>
+                    </div>
+
+                </section>
+
+                <section id="documenter_cover">
+                    <div class="page-header">
+                        <h3>Pages and Components Info</h3>
+                    </div>
+                    
+                    <div id="documenter_buttons"> </div>
+                        <ul>
+                            <li>Home Default (<b>/pages/index.js</b>)</li>
+                            <li>Home Two (<b>/pages/home-two.js</b>)</li>
+                            <li>Home Three (<b>/pages/home-three.js</b>)</li>
+                            <li>Home Four (<b>/pages/home-four.js</b>)</li>
+                            <li>Home Five (<b>/pages/home-five.js</b>)</li>
+                            <li>About (<b>/pages/about.js</b>)</li>
+                            <li>Features (<b>/pages/features.js</b>)</li>
+                            <li>Blog (<b>/pages/blog.js</b>)</li>
+                            <li>Blog Details (<b>/pages/blog-details.js</b>)</li>
+                            <li>FAQ (<b>/pages/faq.js</b>)</li>
+                            <li>Pricing (<b>/pages/pricing.js</b>)</li>
+                            <li>Project (<b>/pages/project.js</b>)</li>
+                            <li>Project Details (<b>/pages/project-details.js</b>)</li>
+                            <li>Services (<b>/pages/services.js</b>)</li>
+                            <li>Team (<b>/pages/team.js</b>)</li>
+                            <li>Contact (<b>/pages/contact.js</b>)</li>
+                        </ul>
+                    <h6 style="margin-top:20px"><strong>Common Components:</strong></h6>
+                    <ul>
+                        <li>Head (<b>/components/Layouts/Head.js</b>)</li>
+                        <li>Header (<b>/components/Layouts/Header.js</b>)</li>
+                        <li>Footer (<b>/components/Layouts/Footer.js</b>)</li>
+                        <li>GoTop (<b>/components/Layouts/GoTop.js</b>)</li>
+                    </ul>
+                    
+                    <h6 style="margin-top:20px"><strong>Template Features:</strong></h6>
+                    <ul>
+                        <li>ES6+</li>
+                        <li>React JS 16.8+</li>
+                        <li>Next JS 8.0+</li>
+                        <li>Express JS</li>
+                        <li>Nodemailer</li>
+                        <li>SendGrid Mail</li>
+                        <li>Bootstrap 4.3+</li>
+                        <li>Simple client-side routing (page based)</li>
+                        <li>React Wow</li>
+                        <li>Easy Customization</li>
+                        <li>React Google Map</li>
+                        <li>React Modal Video</li>
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li>StartP - React + Next + Express Bootstrap 4 Template</li>
+                        <li>Created: April 10, 2019</li>
+                        <li>Last Updated: December 05, 2019</li>
+                        <li>Version 2.0</li>
+                        <li>By: <a target="_blank" href="https://themeforest.net/user/envytheme/portfolio"> EnvyTheme</a></li>
+                        <li>Email: <a href="mailto:hello@envytheme.com">hello@envytheme.com</a></li>
+                    </ul>
+    
+                    <p></p>
+                </section>
+
+                <section id="dependencies">
+                    <div class="page-header">
+                        <h3>Dependencies</h3>
+                    </div>
+                    <p> Here are the <strong>dependencies</strong> list which being used in the StartP React Template:</p>
+                    <pre class="line-numbers">
+<code class="language-markup"> 
+"dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "es6-promise": "^4.2.6",
+    "express": "^4.16.4",
+    "google-map-react": "^1.1.4",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^8.0.4",
+    "next-compose-plugins": "^2.1.1",
+    "next-images": "^1.1.1",
+    "next-optimized-images": "^2.4.0",
+    "nodemailer": "^6.1.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "react": "^16.8.6",
+    "react-accessible-accordion": "^3.0.0",
+    "react-dom": "^16.8.6",
+    "react-feather": "^1.1.6",
+    "react-google-maps": "^9.4.5",
+    "react-image-lightbox": "^5.1.0",
+    "react-modal-video": "^1.2.1",
+    "react-no-ssr": "^1.1.0",
+    "react-odometerjs": "^2.1.1",
+    "react-owl-carousel3": "^2.2.5",
+    "react-preloading-screen": "^1.0.2",
+    "react-slick": "^0.23.2",
+    "react-wow": "^1.0.0",
+    "svg-sprite-loader": "^4.1.3",
+    "webp-loader": "^0.4.0"
+},
+"devDependencies": {
+    "webpack": "^4.29.6"
+}
+</code>
+                    </pre class="brush:css">
+                </section>
+
+                <section id="change_layout">
+                    <div class="page-header">
+                        <h3>Change Default Home Page</h3>
+                    </div>
+                    <p>The default home page is <code class="language-markup">index.js</code> which placed in <code class="language-markup">/pages/index.js</code> if you want change this default to home page two as default home then just take backup your <code class="language-markup">index.js</code> & make <code class="language-markup">home-two.js</code> to <code class="language-markup">index.js</code> & that is.</p>
+                </section>
+
+                <section id="fonts_used">
+                    <div class="page-header">
+                        <h3>Fonts</h3>
+                    </div>
+                    <p> By default, the template loads <strong>Montserrat</strong> font from Google Web Font Services, you can change the font with the one that suits you best.</p>
+                    <p>You will find the font code in the &quot;<strong>style.scss</strong>&quot; file: <code class="language-css">/client/src/assets/css/style.css</code></p>
+                    <pre class="line-numbers">
+<code class="language-css">
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</code>
+                    </pre>
+                </section>
+                
+                <section id="credits">
+                    <div class="page-header">
+                        <h3>Credits</h3>
+                    </div>
+                    <strong>Images</strong><br>
+                    <a href="https://unsplash.com/" target="_blank">Unsplash</a><br />
+                    <a href="https://burst.shopify.com/" target="_blank">Burst</a><br />
+                    <a href="https://www.freepik.com/" target="_blank">Freepick</a><br />
+
+                    <div class="height-15"></div>
+
+                    <strong>Packages</strong><br>
+                    
+                    <a href="https://www.npmjs.com/package/react" target="_blank">React</a><br />
+                    <a href="https://www.npmjs.com/package/next" target="_blank">Next.js</a><br />
+                    <a href="https://expressjs.com/" target="_blank">Express JS</a><br />
+                    <a href="https://github.com/zeit/next-plugins/tree/master/packages/next-css" target="_blank">Next.js + CSS</a><br />
+
+                    <a href="https://www.npmjs.com/package/react-dom" target="_blank">ReactDom</a><br />
+                    <a href="https://www.npmjs.com/package/next-optimized-images" target="_blank">Next Optimized Images</a><br />
+                    <a href="https://www.npmjs.com/package/next-compose-plugins" target="_blank">Next Compose Plugins</a><br />
+
+                    <a href="https://getbootstrap.com/docs/4.3/getting-started/download/#npm" target="_blank">Bootstrap</a><br />
+                    <a href="https://www.npmjs.com/package/body-parser" target="_blank">body-parser</a><br />
+                    <a href="https://www.npmjs.com/package/es6-promise" target="_blank">ES6-Promise</a><br />
+                    <a href="https://www.npmjs.com/package/isomorphic-fetch" target="_blank">isomorphic-fetch</a><br />
+                    <a href="https://www.npmjs.com/package/next-images" target="_blank">Next.js + Images</a><br />
+                    <a href="https://nodemailer.com/about/" target="_blank">Nodemailer</a><br />
+                    <a href="https://www.npmjs.com/package/nodemailer-sendgrid-transport" target="_blank">nodemailer-sendgrid-transport</a><br />
+                    <a href="https://www.npmjs.com/package/react-image-lightbox" target="_blank">React Image Lightbox</a><br />
+                    <a href="https://www.npmjs.com/package/react-modal-video" target="_blank">react-modal-video</a><br />
+                    <a href="https://github.com/kadirahq/react-no-ssr#react-no-ssr" target="_blank">react-no-ssr</a><br />
+                    <a href="https://www.npmjs.com/package/react-odometerjs" target="_blank">React Odometer.js</a><br />
+
+                    <a href="https://github.com/google-map-react/google-map-react#google-map-react----" target="_blank">Google Map React</a><br />
+
+                    <a href="https://fonts.google.com/" target="_blank">Google Fonts</a><br />
+                    <a href="https://github.com/feathericons/react-feather" target="_blank">react-feather</a><br />
+                    <a href="https://github.com/springload/react-accessible-accordion" target="_blank">react-accessible-accordion</a><br />
+                </section>
+                
+                <section id="supports">
+                    <div class="page-header">
+                        <h3>Support</h3>
+                    </div>
+                    <p> If you have any questions, please use our profile contact form on Envato ( <a target="_blank" href="https://themeforest.net/user/envytheme">https://themeforest.net/user/envytheme</a> ). <br>
+                    We aim to answer all questions within <strong>24 hours</strong> . In some cases the waiting time can be extended to <strong>48 hours.</strong></p>
+                    <p>Email: <a href="mailto:hello@envytheme.com">hello@envytheme.com</a></p>
+                </section>
+            </article>
+            <!-- END Main content --> 
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container-fluid"> <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p>Copyright &copy; 2019. All right reserved by <a href="https://EnvyTheme.com"
+                                target="_new">EnvyTheme.com</a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <ul class="footer-menu">
+                            <li><a href="mailto:hello@envytheme.com">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+
+    </body>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript">
+        console.log(returnCitySN);
+        
+    </script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title></title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- 分享配置 -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <!--     
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="./static/commonScripts/wxShare_data.js"></script> -->
+
+
+    <script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=f2c2e254039745dfb3413702ef22c324&channelFlag=3" class="zhiCustomBtn" id="zhichiScript" data-args="manual=true"></script>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+</body>
+
+</html>
+<script>
+    (function(doc, win) {
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function(event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener('dblclick', function(event) {
+            event.preventDefault();
+        })
+        try {
+            //ip地址
+            window.localStorage.setItem('configIP', returnCitySN["cip"])
+        } catch (err) {
+            console.log(err)
+        }
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';
+                // //console.log(docEl.style.fontSize)
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
